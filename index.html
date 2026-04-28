@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="TO.css">
+    <title>Document</title>
+</head>
+<body>
+<div class="container">
+   <H1>Todo List</H1> 
+   <div class="add">
+    <input type="text" placeholder="Enter Task" id="enter">
+    <button class="btn">Add Todo</button>
+   </div>
+  
+   <section class="todo"></section> 
+</div>
+   
+    <script>
+     const input=document.getElementById("enter")
+
+     const addBtn = document.querySelector(".btn")
+
+     const todoSection =
+     document.querySelector(".todo");
+
+     addBtn.addEventListener("click",function (){
+        const taskText = input.value.trim();
+
+        if (taskText == "") return;
+
+        const taskDiv = document.createElement("div");
+        taskDiv.classList.add("task");
+        taskDiv.style.color="white";
+        const checkbox = 
+    document.createElement("input");
+        checkbox.type = "checkbox";
+
+        const task = document.createElement("span");
+        task.innerText = taskText;
+
+        const delBtn = 
+    document.createElement("button");
+        delBtn.innerText="DELETE";
+        delBtn.style.backgroundColor = "#a2a0a0"
+        delBtn.style.color = "black";
+        delBtn.style.padding = " 0.5rem 1rem";
+        delBtn.style.borderRadius="6px";
+        delBtn.style.border="none";
+        delBtn.style.fontSize="1rem";
+        delBtn.style.fontWeight="500"
+        
+        // color: black;
+    // padding: 0.5rem 1rem;
+    // border-radius: 6px;
+    /* border-width: medium; */
+    // border-style: none;
+    /* border-color: currentcolor; */
+    /* border-image: initial; */
+    // font-size: 1rem;
+    // background: #a2a0a0;
+    // font-weight: 500;
+        
+
+        const left = document.createElement("div");
+        left.appendChild(checkbox);
+        left.appendChild(task);
+
+        
+        delBtn.addEventListener("click",function () {
+            taskDiv.remove();
+        });
+        taskDiv.appendChild(left);
+        taskDiv.appendChild(delBtn);
+        
+        todoSection.appendChild(taskDiv);
+
+        input.value = "";
+     });
+     </script>
+    
+    
+   
+</body>
+</html>

@@ -1,0 +1,97 @@
+body{
+       background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+    
+}
+H1{
+    color: black;
+    font-size: 50px;
+    
+}
+.add{
+       display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    align-items: center;
+    gap: 10px;
+}
+.add input{
+ padding: 1rem;
+    font-size: 1rem;
+    width: 250px;
+    border-radius: 6px;
+    /* border: 1px solid #ccc; */
+    border: none;
+}
+.add button{
+       background-color: cornflowerblue;
+    
+    border-radius: 15px;
+    padding: 1rem 2rem;
+    border: none;
+    font-size: 1rem;
+    font-weight: 500;
+}
+.del{
+    gap: 10px;
+    margin-top: 10px;
+    color:yellow ;
+}
+.del button{
+    background-color: yellow;
+    border-radius: 15px;
+    padding: 5px;
+    box-shadow:  white 20px;
+    box-shadow: 1px 1px 10px whitesmoke;
+}
+.todo{
+    margin-top: 15px;
+    width: 300px;
+    
+}
+.task{
+   display: flex;
+    /* justify-content: center; */
+    /* margin-top: 20px; */
+    align-items: center;
+    /* text-align: left; */
+    /* justify-content: flex-start; */
+    gap: 5rem;
+    /* align-self: flex-start; */
+    margin-bottom: 1rem;
+    font-size: 25px;    
+}
+.task span{
+    letter-spacing: normal;
+    white-space: nowrap;
+    color: #333;
+    font-weight: 500;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid white;
+    height: 550px;
+    width: 750px;
+    margin-left: 400px;
+    box-shadow: 0px 4px 15px black;
+    background-color: #c7edff;
+    border-radius: 15px;
+}
+
+.taskDiv{
+    gap:20px;
+}
+
+.delBtn{
+    box-shadow: 1px 1px 5px wheat;
+}
+
+.left{
+    width: 100px;
+}
